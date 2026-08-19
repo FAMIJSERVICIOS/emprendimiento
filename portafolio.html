@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio de Trabajos Realizados | FAMIJ SERVICIOS S.A.C.</title>
+<meta name="description" content="Galería de trabajos realizados por FAMIJ SERVICIOS S.A.C.: estructuras metálicas, drywall, gasfitería, electricidad y pintura en Lima y provincias.">
+<link rel="canonical" href="https://famijservicios.com/portafolio.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Portafolio de Trabajos Realizados | FAMIJ SERVICIOS S.A.C.">
+<meta property="og:description" content="Galería de trabajos realizados: estructuras metálicas, drywall, gasfitería, electricidad y pintura en Lima y provincias.">
+<meta property="og:image" content="https://famijservicios.com/assets/trabajos/mezzanine-estructura-metalica.jpg">
+<meta property="og:url" content="https://famijservicios.com/portafolio.html">
+<meta property="og:locale" content="es_PE">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAVBAR (igual que index.html) ============ -->
+<header class="navbar">
+  <a href="index.html" class="logo"><span class="bolt"><i class="fa-solid fa-bolt"></i></span>FAMIJ <b>SERVICIOS</b></a>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+  <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menú">
+    <i class="fa-solid fa-bars open-icon"></i>
+    <i class="fa-solid fa-xmark close-icon"></i>
+  </label>
+
+  <nav class="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="index.html#nosotros">Nosotros</a>
+    <a href="index.html#servicios">Servicios</a>
+    <a href="portafolio.html" class="nav-btn-highlight" style="color:var(--ink) !important;"><i class="fa-solid fa-images"></i> Portafolio</a>
+    <a href="index.html#clientes">Clientes</a>
+    <a href="index.html#contacto">Contacto</a>
+  </nav>
+</header>
+
+<!-- ============ HERO DEL PORTAFOLIO ============ -->
+<section class="portfolio-hero">
+  <div class="container">
+    <span class="eyebrow eyebrow--light">Trabajos ejecutados por FAMIJ</span>
+    <h2 class="h-section">Portafolio de Proyectos</h2>
+    <p>Selecciona una categoría para ver fotos reales de obras que hemos diseñado, fabricado e instalado en Lima y provincias.</p>
+    <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Volver al inicio</a>
+  </div>
+</section>
+
+<!-- ============ GALERÍA CON PESTAÑAS (100% CSS, sin JS) ============ -->
+<section id="portafolio">
+  <div class="container">
+
+    <input type="radio" name="pf-cat" id="pf-cat-generales" class="pf-tabs-input" checked>
+    <input type="radio" name="pf-cat" id="pf-cat-estructuras" class="pf-tabs-input">
+    <input type="radio" name="pf-cat" id="pf-cat-drywall" class="pf-tabs-input">
+
+    <div class="pf-cat-ribbon">
+      <label for="pf-cat-generales">Servicios Generales</label>
+      <label for="pf-cat-estructuras">Estructuras Metálicas</label>
+      <label for="pf-cat-drywall">Drywall</label>
+    </div>
+
+    <!-- ===== SERVICIOS GENERALES ===== -->
+    <div class="pf-cat-panel" id="pf-panel-generales">
+
+      <div class="pf-group" id="pf-group-gasfiteria">
+        <div class="pf-group-head"><h3>Gasfitería</h3><span>Reparación de fuga de agua</span></div>
+        <div class="pf-grid">
+          <a class="pf-card" href="#lb-gasfiteria-fuga-picado"><img loading="lazy" decoding="async" src="assets/trabajos/gasfiteria-fuga-picado.jpg" alt="Picado de piso para reparar fuga de agua"><span>Picado de piso para ubicar la fuga</span></a>
+          <a class="pf-card" href="#lb-gasfiteria-fuga-tuberia"><img loading="lazy" decoding="async" src="assets/trabajos/gasfiteria-fuga-tuberia.jpg" alt="Tubería reparada lista para resane"><span>Tubería reparada, lista para resane</span></a>
+        </div>
+      </div>
+
+      <div class="pf-group" id="pf-group-electricidad">
+        <div class="pf-group-head"><h3>Electricidad</h3><span>Cableado interno</span></div>
+        <div class="pf-grid">
+          <a class="pf-card" href="#lb-electricidad-corte-piso"><img loading="lazy" decoding="async" src="assets/trabajos/electricidad-corte-piso.jpg" alt="Corte de piso para cableado interno"><span>Corte de piso para paso de cables</span></a>
+          <a class="pf-card" href="#lb-electricidad-picado-piso"><img loading="lazy" decoding="async" src="assets/trabajos/electricidad-picado-piso.jpg" alt="Picado de piso para paso de cables"><span>Picado de piso para canalización</span></a>
+        </div>
+      </div>
+
+      <div class="pf-group" id="pf-group-pintura">
+        <div class="pf-group-head"><h3>Pintura Comercial y Epóxica</h3><span>Fachadas industriales</span></div>
+        <div class="pf-grid">
+          <a class="pf-card" href="#lb-pintura-fachada-andamio"><img loading="lazy" decoding="async" src="assets/trabajos/pintura-fachada-andamio.jpg" alt="Pintura de fachada industrial con andamio"><span>Pintura de fachada con andamio</span></a>
+          <a class="pf-card" href="#lb-pintura-fachada-zona-acopio"><img loading="lazy" decoding="async" src="assets/trabajos/pintura-fachada-zona-acopio.jpg" alt="Pintura de fachada de caseta industrial"><span>Fachada de caseta industrial</span></a>
+          <a class="pf-card" href="#lb-cuarto-bombas-exterior"><img loading="lazy" decoding="async" src="assets/trabajos/cuarto-bombas-exterior.jpg" alt="Pintura de fachada de cuarto de bombas"><span>Fachada de cuarto de bombas</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===== ESTRUCTURAS METÁLICAS ===== -->
+    <div class="pf-cat-panel" id="pf-panel-estructuras">
+
+      <div class="pf-group" id="pf-group-naves">
+        <div class="pf-group-head"><h3>Naves Industriales</h3><span>Galpones y almacenes</span></div>
+        <div class="pf-grid">
+          <a class="pf-card" href="#lb-nave-industrial-fachada"><img loading="lazy" decoding="async" src="assets/trabajos/nave-industrial-fachada.jpg" alt="Fachada de nave industrial construida por FAMIJ Servicios"><span>Fachada de nave industrial terminada</span></a>
+        </div>
+      </div>
+
+      <div class="pf-group" id="pf-group-racks">
+        <div class="pf-group-head"><h3>Almacenes y Racks</h3><span>Montaje y guardas de protección</span></div>
+        <div class="pf-grid">
+          <a class="pf-card" href="#lb-rack-vigas-instalacion"><img loading="lazy" decoding="async" src="assets/trabajos/rack-vigas-instalacion.jpg" alt="Instalación de vigas de rack industrial"><span>Instalación de vigas de rack</span></a>
+          <a class="pf-card" href="#lb-almacen-racks-pasillo"><img loading="lazy" decoding="async" src="assets/trabajos/almacen-racks-pasillo.jpg" alt="Pasillo de almacén con racks instalados"><span>Pasillo de almacén con racks</span></a>
+          <a class="pf-card" href="#lb-rack-guarda-instalacion"><img loading="lazy" decoding="async" src="assets/trabajos/rack-guarda-instalacion.jpg" alt="Instalación de guarda de protección en rack"><span>Instalación de guarda de protección</span></a>
+          <a class="pf-card" href="#lb-rack-guarda-1"><img loading="lazy" decoding="async" src="assets/trabajos/rack-guarda-1.jpg" alt="Guarda de protección instalada en rack industrial"><span>Guarda de protección instalada</span></a>
+          <a class="pf-card" href="#lb-rack-guarda-2"><img loading="lazy" decoding="async" src="assets/trabajos/rack-guarda-2.jpg" alt="Guarda de protección terminada en rack industrial, otro ángulo"><span>Guarda de protección, detalle</span></a>
+        </div>
+      </div>
+
+      <div class="pf-group" id="pf-group-mezzanine">
+        <div class="pf-group-head"><h3>Mezzanine, Talleres y Barandas</h3><span>Fabricación y montaje propio</span></div>
+        <div class="pf-grid">
+          <a class="pf-card" href="#lb-mezzanine-estructura-metalica"><img loading="lazy" decoding="async" src="assets/trabajos/mezzanine-estructura-metalica.jpg" alt="Estructura metálica de mezzanine en construcción"><span>Estructura de mezzanine en construcción</span></a>
+          <a class="pf-card" href="#lb-mezzanine-drywall-avance"><img loading="lazy" decoding="async" src="assets/trabajos/mezzanine-drywall-avance.jpg" alt="Avance de mezzanine con drywall"><span>Avance de mezzanine con drywall</span></a>
+          <a class="pf-card" href="#lb-baranda-soldadura"><img loading="lazy" decoding="async" src="assets/trabajos/baranda-soldadura.jpg" alt="Soldadura de baranda metálica en taller FAMIJ"><span>Soldadura de baranda en taller</span></a>
+          <a class="pf-card" href="#lb-baranda-corte"><img loading="lazy" decoding="async" src="assets/trabajos/baranda-corte.jpg" alt="Corte y armado de estructura metálica"><span>Corte y armado de estructura</span></a>
+          <a class="pf-card" href="#lb-escalera-metalica-pintada"><img loading="lazy" decoding="async" src="assets/trabajos/escalera-metalica-pintada.jpg" alt="Escalera metálica pintada, acceso a mezzanine"><span>Escalera metálica terminada</span></a>
+        </div>
+      </div>
+
+      <div class="pf-group" id="pf-group-picking">
+        <div class="pf-group-head"><h3>Coches Picking Car</h3><span>Fabricación en taller</span></div>
+        <div class="pf-grid">
+          <a class="pf-card" href="#lb-coche-picking-fabricacion-1"><img loading="lazy" decoding="async" src="assets/trabajos/coche-picking-fabricacion-1.jpg" alt="Fabricación de coches picking car, pintura en taller"><span>Pintura de coches picking car</span></a>
+          <a class="pf-card" href="#lb-coche-picking-fabricacion-2"><img loading="lazy" decoding="async" src="assets/trabajos/coche-picking-fabricacion-2.jpg" alt="Coches picking car terminados en taller FAMIJ"><span>Coches picking car terminados</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===== DRYWALL ===== -->
+    <div class="pf-cat-panel" id="pf-panel-drywall">
+
+      <div class="pf-group" id="pf-group-tabiqueria">
+        <div class="pf-group-head"><h3>Tabiquería y Divisorias</h3><span>Estructura y paneles</span></div>
+        <div class="pf-grid">
+          <a class="pf-card" href="#lb-drywall-estructura-techo"><img loading="lazy" decoding="async" src="assets/trabajos/drywall-estructura-techo.jpg" alt="Estructura metálica de drywall antes del forrado"><span>Estructura metálica antes del forrado</span></a>
+          <a class="pf-card" href="#lb-drywall-panel-instalacion"><img loading="lazy" decoding="async" src="assets/trabajos/drywall-panel-instalacion.jpg" alt="Instalación de paneles de drywall"><span>Instalación de paneles de drywall</span></a>
+        </div>
+      </div>
+
+      <div class="pf-group" id="pf-group-cielo-raso">
+        <div class="pf-group-head"><h3>Cielo Raso y Baldosas Acústicas</h3><span>Ambiente terminado</span></div>
+        <div class="pf-grid">
+          <a class="pf-card" href="#lb-drywall-oficina-terminada"><img loading="lazy" decoding="async" src="assets/trabajos/drywall-oficina-terminada.jpg" alt="Oficina terminada con cielo raso de baldosas acústicas"><span>Oficina con cielo raso terminado</span></a>
+        </div>
+      </div>
+
+      <div class="pf-group" id="pf-group-remodelacion">
+        <div class="pf-group-head"><h3>Remodelaciones y Coberturas</h3><span>Proyectos terminados</span></div>
+        <div class="pf-grid">
+          <a class="pf-card" href="#lb-drywall-fachada-terminada"><img loading="lazy" decoding="async" src="assets/trabajos/drywall-fachada-terminada.jpg" alt="Cobertura en drywall terminada, fachada pintada"><span>Cobertura en drywall terminada</span></a>
+          <a class="pf-card" href="#lb-edificio-dos-pisos-terminado"><img loading="lazy" decoding="async" src="assets/trabajos/edificio-dos-pisos-terminado.jpg" alt="Edificio de dos pisos con cobertura terminado"><span>Edificio de dos pisos terminado</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pf-cta">
+      <h2>¿Tu proyecto se parece a alguno de estos?</h2>
+      <p>Escríbenos y coordinamos una visita técnica sin costo.</p>
+      <a href="https://wa.me/51982886445?text=Vi%20su%20portafolio%20y%20quiero%20cotizar%20un%20proyecto." target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ LIGHTBOX: fotos ampliadas (100% CSS) ============ -->
+<div id="lb-gasfiteria-fuga-picado" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/gasfiteria-fuga-picado.jpg" alt="Picado de piso para reparar fuga de agua">
+    <figcaption>Picado de piso para ubicar la fuga</figcaption>
+  </figure>
+</div>
+<div id="lb-gasfiteria-fuga-tuberia" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/gasfiteria-fuga-tuberia.jpg" alt="Tubería reparada lista para resane">
+    <figcaption>Tubería reparada, lista para resane</figcaption>
+  </figure>
+</div>
+<div id="lb-electricidad-corte-piso" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/electricidad-corte-piso.jpg" alt="Corte de piso para cableado interno">
+    <figcaption>Corte de piso para paso de cables</figcaption>
+  </figure>
+</div>
+<div id="lb-electricidad-picado-piso" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/electricidad-picado-piso.jpg" alt="Picado de piso para paso de cables">
+    <figcaption>Picado de piso para canalización</figcaption>
+  </figure>
+</div>
+<div id="lb-pintura-fachada-andamio" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/pintura-fachada-andamio.jpg" alt="Pintura de fachada industrial con andamio">
+    <figcaption>Pintura de fachada con andamio</figcaption>
+  </figure>
+</div>
+<div id="lb-pintura-fachada-zona-acopio" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/pintura-fachada-zona-acopio.jpg" alt="Pintura de fachada de caseta industrial">
+    <figcaption>Fachada de caseta industrial</figcaption>
+  </figure>
+</div>
+<div id="lb-cuarto-bombas-exterior" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/cuarto-bombas-exterior.jpg" alt="Pintura de fachada de cuarto de bombas">
+    <figcaption>Fachada de cuarto de bombas</figcaption>
+  </figure>
+</div>
+<div id="lb-nave-industrial-fachada" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/nave-industrial-fachada.jpg" alt="Fachada de nave industrial construida por FAMIJ Servicios">
+    <figcaption>Fachada de nave industrial terminada</figcaption>
+  </figure>
+</div>
+<div id="lb-rack-vigas-instalacion" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/rack-vigas-instalacion.jpg" alt="Instalación de vigas de rack industrial">
+    <figcaption>Instalación de vigas de rack</figcaption>
+  </figure>
+</div>
+<div id="lb-almacen-racks-pasillo" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/almacen-racks-pasillo.jpg" alt="Pasillo de almacén con racks instalados">
+    <figcaption>Instalaciòn de racks</figcaption>
+  </figure>
+</div>
+<div id="lb-rack-guarda-instalacion" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/rack-guarda-instalacion.jpg" alt="Instalación de guarda de protección en rack">
+    <figcaption>Instalación de guarda de protección</figcaption>
+  </figure>
+</div>
+<div id="lb-rack-guarda-1" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/rack-guarda-1.jpg" alt="Guarda de protección instalada en rack industrial">
+    <figcaption>Guarda de protección instalada</figcaption>
+  </figure>
+</div>
+<div id="lb-rack-guarda-2" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/rack-guarda-2.jpg" alt="Guarda de protección terminada en rack industrial, otro ángulo">
+    <figcaption>Guarda de protección, detalle</figcaption>
+  </figure>
+</div>
+<div id="lb-mezzanine-estructura-metalica" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/mezzanine-estructura-metalica.jpg" alt="Estructura metálica de mezzanine en construcción">
+    <figcaption>Estructura de mezzanine en construcción</figcaption>
+  </figure>
+</div>
+<div id="lb-mezzanine-drywall-avance" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/mezzanine-drywall-avance.jpg" alt="Avance de mezzanine con drywall">
+    <figcaption>Avance de mezzanine con drywall</figcaption>
+  </figure>
+</div>
+<div id="lb-baranda-soldadura" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/baranda-soldadura.jpg" alt="Soldadura de baranda metálica en taller FAMIJ">
+    <figcaption>Soldadura de baranda en taller</figcaption>
+  </figure>
+</div>
+<div id="lb-baranda-corte" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/baranda-corte.jpg" alt="Corte y armado de estructura metálica">
+    <figcaption>Corte y armado de estructura</figcaption>
+  </figure>
+</div>
+<div id="lb-escalera-metalica-pintada" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/escalera-metalica-pintada.jpg" alt="Escalera metálica pintada, acceso a mezzanine">
+    <figcaption>Escalera metálica terminada</figcaption>
+  </figure>
+</div>
+<div id="lb-coche-picking-fabricacion-1" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/coche-picking-fabricacion-1.jpg" alt="Fabricación de coches picking car, pintura en taller">
+    <figcaption>Pintura de coches picking car</figcaption>
+  </figure>
+</div>
+<div id="lb-coche-picking-fabricacion-2" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/coche-picking-fabricacion-2.jpg" alt="Coches picking car terminados en taller FAMIJ">
+    <figcaption>Coches picking car terminados</figcaption>
+  </figure>
+</div>
+<div id="lb-drywall-estructura-techo" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/drywall-estructura-techo.jpg" alt="Estructura metálica de drywall antes del forrado">
+    <figcaption>Estructura metálica antes del forrado</figcaption>
+  </figure>
+</div>
+<div id="lb-drywall-panel-instalacion" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/drywall-panel-instalacion.jpg" alt="Instalación de paneles de drywall">
+    <figcaption>Instalación de paneles de drywall</figcaption>
+  </figure>
+</div>
+<div id="lb-drywall-oficina-terminada" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/drywall-oficina-terminada.jpg" alt="Oficina terminada con cielo raso de baldosas acústicas">
+    <figcaption>Oficina con cielo raso terminado</figcaption>
+  </figure>
+</div>
+<div id="lb-drywall-fachada-terminada" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/drywall-fachada-terminada.jpg" alt="Cobertura en drywall terminada, fachada pintada">
+    <figcaption>Cobertura en drywall terminada</figcaption>
+  </figure>
+</div>
+<div id="lb-edificio-dos-pisos-terminado" class="lightbox">
+  <a href="#cerrar" class="lightbox-close" aria-label="Cerrar">&times;</a>
+  <figure class="lightbox-inner">
+    <img loading="lazy" decoding="async" src="assets/trabajos/edificio-dos-pisos-terminado.jpg" alt="Edificio de dos pisos con cobertura terminado">
+    <figcaption>Edificio de dos pisos terminado</figcaption>
+  </figure>
+</div>
+
+<!-- ============ FOOTER (igual que index.html) ============ -->
+<footer id="contacto">
+  <div class="container contact-wrap">
+    <div>
+      <span class="eyebrow eyebrow--light">Contacto</span>
+      <h2 class="h-section">Atención a Proyectos</h2>
+      <p>Escríbenos para programar la evaluación técnica de tu obra.</p>
+      <div style="margin-top:20px;">
+        <a href="https://wa.me/51982886445" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Chat directo en WhatsApp</a>
+      </div>
+    </div>
+
+    <div>
+      <ul class="contact-list">
+        <li><i class="fa-solid fa-mobile-screen"></i><span><b>Coordinación Técnica</b>982 886 445 · 982 886 484</span></li>
+        <li><i class="fa-solid fa-envelope"></i><span><b>Correo Electrónico</b>famijserviciossac@hotmail.com</span></li>
+        <li><i class="fa-solid fa-location-dot"></i><span><b>Dirección Fiscal y Taller</b>Av. Alcides Vigo, Mz. Z, Lt. 12 — San Martín de Porres, Lima</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© 2026 FAMIJ SERVICIOS S.A.C.</span>
+    <span>Cobertura en Lima y Provincias</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/51982886445" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
