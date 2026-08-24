@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://famijservicios.github.io/emprendimiento/sitemap.xml
+Sitemap: https://famij.com.pe/sitemap.xml

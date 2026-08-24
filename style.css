@@ -1,6 +1,8 @@
 /* ==========================================================================
-   FAMIJ SERVICIOS S.A.C. — Menú en cinta desplegable + Modales de detalle
-   100% HTML & CSS — Sin Javascript
+   FAMIJ Soluciones Integrales S.A.C. — Hoja de estilos del sitio
+   Interfaz en HTML y CSS. El único JavaScript del sitio (al final de
+   index.html) calcula los años de experiencia y arma el mensaje del
+   cotizador; nada de la maquetación depende de él.
    ========================================================================== */
 
 :root {
@@ -57,8 +59,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 :focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
-/* Sobre superficies navy el rojo profundo pierde contraste: se aclara el anillo */
-.navbar :focus-visible,
+/* Sobre superficies navy el rojo profundo pierde contraste: se aclara el anillo.
+   La barra de navegación es blanca, así que ahí se mantiene el rojo profundo. */
 footer :focus-visible,
 .section-dark :focus-visible,
 .hero :focus-visible,
@@ -136,6 +138,8 @@ footer :focus-visible,
 /* --------------------------------------------------------------------
    HEADER & MENÚ EN CINTA DE OPCIONES (DROPDOWN RIBBON CSS)
    -------------------------------------------------------------------- */
+/* Barra blanca: deja que el logo se lea a todo color, sin recortes
+   ni versiones invertidas. El resto del sitio conserva el navy. */
 .navbar {
   position: sticky;
   top: 0;
@@ -143,24 +147,28 @@ footer :focus-visible,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 28px;
-  background: rgba(10, 34, 64, 0.98);
+  padding: 12px 28px;
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(8px);
-  border-bottom: 2px solid var(--red-on-dark);
+  border-bottom: 2px solid var(--red);
+  box-shadow: 0 1px 14px rgba(10, 34, 64, 0.08);
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
+  /* Si la imagen del logo falta, el texto alternativo se ve presentable */
   font-family: var(--font-display);
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--white);
+  font-size: 20px;
+  color: var(--navy-deep);
   text-transform: uppercase;
 }
-/* Solo el ícono lleva el acento; el nombre queda en blanco */
-.logo .bolt { color: var(--red-on-dark); }
+.logo img {
+  height: 52px;
+  width: auto;
+  display: block;
+}
 
 .nav-links {
   display: flex;
@@ -172,10 +180,10 @@ footer :focus-visible,
   font-size: 13px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.85);
+  color: var(--navy-deep);
   transition: color 0.2s ease;
 }
-.nav-links a:hover { color: var(--red-on-dark); }
+.nav-links a:hover { color: var(--red); }
 
 /* Dropdown / Ribbon de Servicios */
 .nav-dropdown { position: relative; display: inline-block; }
@@ -188,10 +196,10 @@ footer :focus-visible,
   top: 100%;
   left: 0;
   min-width: 310px;
-  background: var(--navy-deep);
-  border: 1px solid var(--line-on-dark);
-  border-top: 3px solid var(--red-on-dark);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--red);
+  box-shadow: 0 12px 28px rgba(10,34,64,0.18);
   padding: 10px 0;
   z-index: 1005;
 }
@@ -201,11 +209,12 @@ footer :focus-visible,
   gap: 10px;
   padding: 12px 20px;
   font-size: 12px;
-  color: rgba(255,255,255,0.9);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: var(--navy-deep);
+  border-bottom: 1px solid var(--line);
 }
-.dropdown-menu a:hover { background: var(--navy-2); color: var(--red-on-dark); }
-.dropdown-menu a i { color: var(--red-on-dark); width: 16px; }
+.dropdown-menu a:last-child { border-bottom: none; }
+.dropdown-menu a:hover { background: var(--paper-2); color: var(--red); }
+.dropdown-menu a i { color: var(--red); width: 16px; }
 
 .nav-dropdown:hover .dropdown-menu { display: block; }
 .nav-dropdown:hover .drop-icon { transform: rotate(180deg); }
@@ -221,7 +230,7 @@ footer :focus-visible,
 }
 
 .nav-toggle-checkbox { display: none; }
-.nav-toggle-label { display: none; color: white; font-size: 22px; cursor: pointer; }
+.nav-toggle-label { display: none; color: var(--navy-deep); font-size: 22px; cursor: pointer; }
 
 /* --------------------------------------------------------------------
    HERO — foto real de obra, contenida al mismo ancho que el resto del
@@ -267,9 +276,14 @@ footer :focus-visible,
   text-transform: uppercase; color: #FFFFFF; margin: 0 0 18px; text-wrap: balance;
 }
 .hero h1 span { display: block; opacity: 0; transform: translateY(14px); animation: heroRise .62s cubic-bezier(.22,.68,.36,1) forwards; }
+/* Retardo por posición; el color va aparte para que el número de
+   líneas del titular pueda cambiar sin romper la secuencia. */
 .hero h1 span:nth-child(1) { animation-delay: .12s; }
-.hero h1 span:nth-child(2) { animation-delay: .22s; }
-.hero h1 span.accent { animation-delay: .32s; color: var(--red-on-dark); }
+.hero h1 span:nth-child(2) { animation-delay: .24s; }
+.hero h1 span:nth-child(3) { animation-delay: .36s; }
+.hero h1 span.accent { color: var(--red-on-dark); }
+/* Acento rojo para titulares sobre fondo claro */
+.h-section .accent { color: var(--red); }
 .hero-content .lede {
   font-family: var(--font-body); color: #DCE7F3; font-size: 15.5px; line-height: 1.55; max-width: 460px;
   margin: 0 0 26px; opacity: 0; animation: heroRise .6s ease-out .46s forwards;
@@ -515,10 +529,10 @@ footer { background: var(--ink); color: rgba(255,255,255,0.8); padding: 70px 0 2
     display: none;
     position: absolute;
     top: 100%; left: 0; right: 0;
-    background: var(--navy-deep);
+    background: var(--white);
     flex-direction: column;
     padding: 20px;
-    border-bottom: 3px solid var(--red-on-dark);
+    border-bottom: 3px solid var(--red);
   }
 
   .nav-toggle-checkbox:checked ~ .nav-links { display: flex; }
@@ -586,14 +600,16 @@ footer { background: var(--ink); color: rgba(255,255,255,0.8); padding: 70px 0 2
 
 #pf-cat-generales:checked ~ .pf-cat-ribbon label[for="pf-cat-generales"],
 #pf-cat-estructuras:checked ~ .pf-cat-ribbon label[for="pf-cat-estructuras"],
-#pf-cat-drywall:checked ~ .pf-cat-ribbon label[for="pf-cat-drywall"] {
+#pf-cat-drywall:checked ~ .pf-cat-ribbon label[for="pf-cat-drywall"],
+#pf-cat-mantenimiento:checked ~ .pf-cat-ribbon label[for="pf-cat-mantenimiento"] {
   background: var(--navy-deep);
   border-color: var(--navy-deep);
   color: var(--red-on-dark);
 }
 #pf-cat-generales:checked ~ #pf-panel-generales,
 #pf-cat-estructuras:checked ~ #pf-panel-estructuras,
-#pf-cat-drywall:checked ~ #pf-panel-drywall { display: block; }
+#pf-cat-drywall:checked ~ #pf-panel-drywall,
+#pf-cat-mantenimiento:checked ~ #pf-panel-mantenimiento { display: block; }
 
 .pf-group { margin-bottom: 54px; scroll-margin-top: 90px; }
 .pf-group:last-child { margin-bottom: 0; }
@@ -675,78 +691,43 @@ footer { background: var(--ink); color: rgba(255,255,255,0.8); padding: 70px 0 2
 /* --------------------------------------------------------------------
    Enlace directo desde index.html a una sección específica del
    portafolio: al llegar con #pf-group-xxx, abre automáticamente
-   la pestaña de categoría correspondiente y oculta las otras dos.
+   la pestaña de esa categoría y oculta las demás.
    (usa :target + :has(), sin JavaScript)
+
+   Se apoya en la pertenencia del grupo a su panel en vez de listar
+   cada id: así funciona con cualquier grupo nuevo sin tocar el CSS.
    -------------------------------------------------------------------- */
 
-.container:has(#pf-group-gasfiteria:target) #pf-panel-generales,
-.container:has(#pf-group-electricidad:target) #pf-panel-generales,
-.container:has(#pf-group-pintura:target) #pf-panel-generales,
-.container:has(#pf-group-pisos:target) #pf-panel-generales,
-.container:has(#pf-group-aire:target) #pf-panel-generales {
+.container:has(#pf-panel-generales .pf-group:target) #pf-panel-generales,
+.container:has(#pf-panel-estructuras .pf-group:target) #pf-panel-estructuras,
+.container:has(#pf-panel-drywall .pf-group:target) #pf-panel-drywall,
+.container:has(#pf-panel-mantenimiento .pf-group:target) #pf-panel-mantenimiento {
   display: block !important;
-}
-.container:has(#pf-group-gasfiteria:target) #pf-panel-estructuras,
-.container:has(#pf-group-electricidad:target) #pf-panel-estructuras,
-.container:has(#pf-group-pintura:target) #pf-panel-estructuras,
-.container:has(#pf-group-pisos:target) #pf-panel-estructuras,
-.container:has(#pf-group-aire:target) #pf-panel-estructuras,
-.container:has(#pf-group-gasfiteria:target) #pf-panel-drywall,
-.container:has(#pf-group-electricidad:target) #pf-panel-drywall,
-.container:has(#pf-group-pintura:target) #pf-panel-drywall,
-.container:has(#pf-group-pisos:target) #pf-panel-drywall,
-.container:has(#pf-group-aire:target) #pf-panel-drywall {
-  display: none !important;
 }
 
-.container:has(#pf-group-naves:target) #pf-panel-estructuras,
-.container:has(#pf-group-racks:target) #pf-panel-estructuras,
-.container:has(#pf-group-mezzanine:target) #pf-panel-estructuras,
-.container:has(#pf-group-picking:target) #pf-panel-estructuras,
-.container:has(#pf-group-cercos:target) #pf-panel-estructuras {
-  display: block !important;
-}
-.container:has(#pf-group-naves:target) #pf-panel-generales,
-.container:has(#pf-group-racks:target) #pf-panel-generales,
-.container:has(#pf-group-mezzanine:target) #pf-panel-generales,
-.container:has(#pf-group-picking:target) #pf-panel-generales,
-.container:has(#pf-group-cercos:target) #pf-panel-generales,
-.container:has(#pf-group-naves:target) #pf-panel-drywall,
-.container:has(#pf-group-racks:target) #pf-panel-drywall,
-.container:has(#pf-group-mezzanine:target) #pf-panel-drywall,
-.container:has(#pf-group-picking:target) #pf-panel-drywall,
-.container:has(#pf-group-cercos:target) #pf-panel-drywall {
-  display: none !important;
-}
+.container:has(#pf-panel-generales .pf-group:target) #pf-panel-estructuras,
+.container:has(#pf-panel-generales .pf-group:target) #pf-panel-drywall,
+.container:has(#pf-panel-generales .pf-group:target) #pf-panel-mantenimiento,
 
-.container:has(#pf-group-tabiqueria:target) #pf-panel-drywall,
-.container:has(#pf-group-cielo-raso:target) #pf-panel-drywall,
-.container:has(#pf-group-remodelacion:target) #pf-panel-drywall {
-  display: block !important;
-}
-.container:has(#pf-group-tabiqueria:target) #pf-panel-generales,
-.container:has(#pf-group-cielo-raso:target) #pf-panel-generales,
-.container:has(#pf-group-remodelacion:target) #pf-panel-generales,
-.container:has(#pf-group-tabiqueria:target) #pf-panel-estructuras,
-.container:has(#pf-group-cielo-raso:target) #pf-panel-estructuras,
-.container:has(#pf-group-remodelacion:target) #pf-panel-estructuras {
+.container:has(#pf-panel-estructuras .pf-group:target) #pf-panel-generales,
+.container:has(#pf-panel-estructuras .pf-group:target) #pf-panel-drywall,
+.container:has(#pf-panel-estructuras .pf-group:target) #pf-panel-mantenimiento,
+
+.container:has(#pf-panel-drywall .pf-group:target) #pf-panel-generales,
+.container:has(#pf-panel-drywall .pf-group:target) #pf-panel-estructuras,
+.container:has(#pf-panel-drywall .pf-group:target) #pf-panel-mantenimiento,
+
+.container:has(#pf-panel-mantenimiento .pf-group:target) #pf-panel-generales,
+.container:has(#pf-panel-mantenimiento .pf-group:target) #pf-panel-estructuras,
+.container:has(#pf-panel-mantenimiento .pf-group:target) #pf-panel-drywall {
   display: none !important;
 }
 
 /* Resalta también la pestaña activa correspondiente */
-.container:has(#pf-group-gasfiteria:target) .pf-cat-ribbon label[for="pf-cat-generales"],
-.container:has(#pf-group-electricidad:target) .pf-cat-ribbon label[for="pf-cat-generales"],
-.container:has(#pf-group-pintura:target) .pf-cat-ribbon label[for="pf-cat-generales"],
-.container:has(#pf-group-pisos:target) .pf-cat-ribbon label[for="pf-cat-generales"],
-.container:has(#pf-group-aire:target) .pf-cat-ribbon label[for="pf-cat-generales"],
-.container:has(#pf-group-naves:target) .pf-cat-ribbon label[for="pf-cat-estructuras"],
-.container:has(#pf-group-racks:target) .pf-cat-ribbon label[for="pf-cat-estructuras"],
-.container:has(#pf-group-mezzanine:target) .pf-cat-ribbon label[for="pf-cat-estructuras"],
-.container:has(#pf-group-picking:target) .pf-cat-ribbon label[for="pf-cat-estructuras"],
-.container:has(#pf-group-cercos:target) .pf-cat-ribbon label[for="pf-cat-estructuras"],
-.container:has(#pf-group-tabiqueria:target) .pf-cat-ribbon label[for="pf-cat-drywall"],
-.container:has(#pf-group-cielo-raso:target) .pf-cat-ribbon label[for="pf-cat-drywall"],
-.container:has(#pf-group-remodelacion:target) .pf-cat-ribbon label[for="pf-cat-drywall"] {
+.container:has(#pf-panel-generales .pf-group:target) .pf-cat-ribbon label[for="pf-cat-generales"],
+.container:has(#pf-panel-estructuras .pf-group:target) .pf-cat-ribbon label[for="pf-cat-estructuras"],
+.container:has(#pf-panel-drywall .pf-group:target) .pf-cat-ribbon label[for="pf-cat-drywall"],
+.container:has(#pf-panel-mantenimiento .pf-group:target) .pf-cat-ribbon label[for="pf-cat-mantenimiento"] {
   background: var(--navy-deep) !important;
   border-color: var(--navy-deep) !important;
   color: var(--red-on-dark) !important;
