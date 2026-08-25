@@ -282,6 +282,13 @@ footer :focus-visible,
 .hero h1 span:nth-child(2) { animation-delay: .24s; }
 .hero h1 span:nth-child(3) { animation-delay: .36s; }
 .hero h1 span.accent { color: var(--red-on-dark); }
+/* Tercera línea del titular: aporta el servicio y la ciudad sin competir
+   con el eslogan. Va en cuerpo, no en display, y sin mayúsculas. */
+.hero h1 span.h1-tagline {
+  font-family: var(--font-body); font-size: clamp(14px, 1.7vw, 18px); font-weight: 600;
+  text-transform: none; line-height: 1.35; color: #DCE7F3;
+  letter-spacing: .01em; margin-top: 14px; max-width: 460px;
+}
 /* Acento rojo para titulares sobre fondo claro */
 .h-section .accent { color: var(--red); }
 .hero-content .lede {
