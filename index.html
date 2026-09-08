@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JS81BERVF7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-JS81BERVF7");
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Servicios Generales y Estructuras Metálicas en Lima | FAMIJ</title>
@@ -1265,12 +1274,25 @@
         "Distrito de la obra: " + val("qf-distrito")
       ];
       if (val("qf-detalle")) lineas.push("Detalle: " + val("qf-detalle"));
+      if (typeof gtag === "function") {
+        gtag("event", "generate_lead", { method: "whatsapp", link_url: "cotizador" });
+      }
       window.open(
         "https://wa.me/51982886445?text=" + encodeURIComponent(lineas.join("\n")),
         "_blank"
       );
     });
   }
+
+  /* Evento de GA4 en cada clic a WhatsApp: botón flotante, navbar, hero,
+     cada modal de servicio y las páginas de servicio. El cotizador ya
+     dispara su propio evento arriba, al armar el mensaje. */
+  document.addEventListener("click", function (e) {
+    var enlace = e.target.closest('a[href*="wa.me"]');
+    if (enlace && typeof gtag === "function") {
+      gtag("event", "generate_lead", { method: "whatsapp", link_url: enlace.href });
+    }
+  });
 </script>
 
 </body>

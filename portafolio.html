@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JS81BERVF7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-JS81BERVF7");
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portafolio de Trabajos Realizados en Lima | FAMIJ</title>
@@ -1205,5 +1214,16 @@
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
+
+<script>
+  /* Evento de GA4 en cada clic a WhatsApp: boton flotante, navbar,
+     hero y cada bloque de servicio. */
+  document.addEventListener("click", function (e) {
+    var enlace = e.target.closest('a[href*="wa.me"]');
+    if (enlace && typeof gtag === "function") {
+      gtag("event", "generate_lead", { method: "whatsapp", link_url: enlace.href });
+    }
+  });
+</script>
 </body>
 </html>
