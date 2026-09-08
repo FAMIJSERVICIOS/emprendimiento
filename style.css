@@ -99,6 +99,9 @@ footer :focus-visible,
 
 .section-head { max-width: 680px; margin-bottom: 40px; }
 .section-head p { color: var(--ink-soft); font-size: 16.5px; }
+/* Sobre fondo navy, --ink-soft solo alcanza 2.6:1. Se usa el mismo tono
+   claro del hero, que da 12.7:1. */
+.section-dark .section-head p { color: #DCE7F3; }
 
 .btn {
   display: inline-flex;
@@ -832,6 +835,12 @@ a.pf-card { display: block; cursor: zoom-in; }
   justify-content: center;
 }
 .lightbox:target { display: flex; }
+/* Sin esto la pagina de atras sigue desplazandose con el lightbox abierto,
+   y al cerrarlo el visitante aparece en otro punto del portafolio.
+   El scrollbar-gutter reserva el ancho de la barra de forma permanente:
+   sin el, al ocultarla el contenido saltaba 15px al abrir cada foto. */
+html { scrollbar-gutter: stable; }
+html:has(.lightbox:target) { overflow: hidden; }
 
 .lightbox-inner {
   max-width: 1100px;

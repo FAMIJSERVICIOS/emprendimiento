@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página no encontrada | FAMIJ</title>
+<meta name="robots" content="noindex">
+<!-- Rutas absolutas: GitHub Pages sirve este archivo desde cualquier profundidad -->
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0A2240">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<style>
+  /* Fondo claro a proposito: el logo es navy y sobre fondo oscuro
+     desaparece. Es la misma razon por la que el navbar es blanco. */
+  .e404 {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--paper);
+    padding: 40px 24px;
+    border-top: 4px solid var(--red);
+  }
+  .e404-inner { max-width: 620px; }
+  .e404 .codigo {
+    font-family: var(--font-display);
+    font-size: clamp(72px, 16vw, 150px);
+    line-height: 0.85;
+    color: var(--red);
+    margin: 0;
+  }
+  .e404 h1 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    font-size: clamp(26px, 5vw, 40px);
+    line-height: 1;
+    margin: 18px 0 14px;
+    color: var(--navy-deep);
+  }
+  .e404 p { color: var(--ink-soft); font-size: 16.5px; line-height: 1.6; margin: 0 0 30px; }
+  .e404-acciones { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  /* Las imagenes son display:block en la hoja global, asi que
+     text-align:center no las centra: hace falta el margin auto. */
+  .e404 img.marca { height: 84px; width: auto; margin: 0 auto 30px; }
+  /* .btn-outline es blanco (pensado para fondos oscuros). Variante navy
+     para fondo claro; el rojo se reserva a la accion principal. */
+  .e404 .btn-secundario { border-color: var(--navy-deep); color: var(--navy-deep); background: transparent; }
+  .e404 .btn-secundario:hover { background: var(--navy-deep); color: var(--white); }
+</style>
+</head>
+<body>
+
+<main class="e404">
+  <div class="e404-inner">
+    <img class="marca" src="/assets/logo-famij-nav.png" alt="FAMIJ Soluciones Integrales S.A.C.">
+    <p class="codigo">404</p>
+    <h1>Esta página no existe</h1>
+    <p>Puede que el enlace esté roto o que la página haya cambiado de dirección. Desde aquí puedes volver al inicio o ver los trabajos que hemos ejecutado.</p>
+    <div class="e404-acciones">
+      <a href="/" class="btn btn-primary">Ir al inicio</a>
+      <a href="/portafolio.html" class="btn btn-secundario">Ver el portafolio</a>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
