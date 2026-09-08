@@ -423,10 +423,11 @@ section { padding: 80px 0; }
    -------------------------------------------------------------------- */
 .testi-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 560px));
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
 }
+/* Con una sola cita, la rejilla se estiraria a todo el ancho y se leeria mal */
+.testi-grid:has(.testi-card:only-child) { max-width: 620px; }
 .testi-card {
   background: white;
   border: 1px solid var(--line);
